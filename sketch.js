@@ -1,23 +1,22 @@
 var snake;
 var scl = 20;
 var bg;
+var sSlider;
 
 
 var food;
 
 function preload() {
-  bg = loadSound("assets/bgmusic.wav");
+//  bg = loadSound("assets/bgmusic.ogg");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   snake = new Snake();
-  frameRate(10);
+  frameRate(60);
   pickLocation();
-  bg.play();
-  bg.setVolume(0.4);
-  textSize(50);
-  text("Mute the music with 'P'", windowWidth, windowHeight);
+//  bg.loop();
+//  bg.setVolume(0.4);
 }
 
 function pickLocation() {
@@ -32,6 +31,14 @@ function draw() {
   snake.death();
   snake.update();
   snake.show();
+  textSize(15);
+  fill(65);
+  text("Mute the music with 'P'", windowWidth/101, windowHeight/1.01);
+
+  textSize(50);
+  fill(60);
+  textStyle(BOLD);
+  text("Score: " + snake.total, windowWidth/2.5, windowHeight/2);
 
   if (snake.eat(food)) {
     pickLocation();
@@ -54,5 +61,9 @@ function keyPressed() {
     snake.dir(-1, 0)
   } else if (keyCode === RIGHT_ARROW) {
     snake.dir(1, 0)
+  }
+
+  if (keyCode === 80) {
+    snake.dir(0, -1);
   }
 }

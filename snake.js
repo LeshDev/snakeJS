@@ -29,7 +29,7 @@ function Snake() {
           console.log("DEV LOG: DEATH")
           this.total = 0;
           this.tail = [];
-          window.open("www.youraddress.com","_self")
+          window.open("../","_self")
         }
       }
     }
