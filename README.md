@@ -9,7 +9,7 @@ But I'm always happy to see how this project grows and is getting better.
 
 ###### If you wanna try this by yourself
 
-Visit [unleshed.tk/p5/snakeJS](http://unleshed.tk/p5/snakeJS)
+Visit [unleshed.net/p5/snakeJS](http://unleshed.net/p5/snakeJS)
 
 ---
 
